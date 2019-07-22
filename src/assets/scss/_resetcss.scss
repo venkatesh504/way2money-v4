@@ -1,0 +1,35 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+  color: #20206a !important;
+}
+button:focus{
+  outline: transparent !important;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #fff !important;
+  background: transparent !important;
+  border-bottom: 1px solid white;
+  border-radius: 0;
+  padding: 0;
+  margin-right: 20px;
+}
+.nav-pills .nav-link {
+  border-radius: .25rem;
+  padding: 0;
+  margin-right: 20px;
+   color: #a7a7a7 !important;
+}
+.tab-content{
+  padding: 20px 0;
+}
+.navbar_fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #ffa217;
+z-index: 4;
+ .signin-btn{
+  background: #20206a;
+ }
+}

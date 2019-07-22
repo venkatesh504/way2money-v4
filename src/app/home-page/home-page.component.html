@@ -1,0 +1,554 @@
+<section class="landing-section">
+  <div class="landing-bg"></div>
+  <div class="top-section">
+    <app-top-nav></app-top-nav>
+    <section class="main-section container">
+      <div class="main-heading text-white text-center">
+        <h1 class="main-head">Business Loans @2% per month </h1>
+        <!-- <h1 class="main-head">Operational <span class="green_color"> Business Loans</span> <br>
+          @2% <span class="less-font">per month</span> </h1> -->
+        <p class="main-caption">Digital Credit
+          Anytime, Anywhere</p> <div class="dowload-app  row text-center">
+              <div class="col-6">
+
+                <p class=" how-much text-right">Download the app</p>
+              </div>
+              <div class="col-6 text-left" >
+                <a href="" style="color: white !important">
+                  <mat-icon>android</mat-icon>
+                </a>
+                <a href="">
+                  <mat-icon>apple</mat-icon>
+                </a>
+              </div>
+
+
+
+            </div>
+
+
+
+
+      </div>
+      <div class="main-body">
+        <div class="main-inner">
+          <!-- <ng5-slider [(value)]="valueTwo" [options]="options"></ng5-slider> -->
+          <!-- <div class="custom-slider">
+                <ng5-slider [(value)]="value" [options]="options"></ng5-slider>
+              </div> -->
+
+          <div class="row">
+            <div class="col-12  ">
+              <p class="how-much">How much you want Barrow? <span class="much-value">&#8377;
+                  {{value}}</span></p>
+
+            </div>
+
+          </div>
+            <div class="row">
+                <div class=" col-12 col-sm-8 col-md-9 col-lg-10 ">
+                    <mat-slider class="example-margin" [disabled]="disabled" [invert]="invert" [max]="max" [min]="min"
+                      [step]="step" thumbLabel [displayWith]="formatLabel" [displayValue]="step" [tickInterval]="tickInterval"
+                      [(ngModel)]="value" (input)="selectAmount($event)">
+                    </mat-slider>
+                  </div>
+                  <div class=" col-12 col-sm-4 col-md-3 col-lg-2">
+                    <button class="main-btn " (click)="selectAmount()">Proceed</button>
+                  </div>
+            </div>
+
+          <div class="calculation " *ngIf="value > 0">
+            <div class="row">
+              <div class="col-12">
+                <p class="calculate-head">
+
+                  Interest Calculation
+                </p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12 text-center pb-3">
+
+                <mat-radio-group aria-label="Select an option" color="red" [(ngModel)]="tenure"
+                  (change)="tenureSelect()">
+                  <mat-radio-button [value]="1">1 month</mat-radio-button>
+                  <mat-radio-button [value]="3">3 months</mat-radio-button>
+                </mat-radio-group>
+
+
+              </div>
+
+            </div>
+
+            <div class="results text-center">
+              <div class="row">
+                <div class="col-6 col-sm-6 col-md-4">
+                  <p class="weekly-caption"> Weekly Installments  </p>
+                  <p class="weekly-value">{{weeklyEMI.toFixed(2)}}</p>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4">
+                  <p class="weekly-caption">Total Interest</p>
+                  <p class="weekly-value">{{interestAmount}}</p>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4">
+                  <p class="weekly-caption">Total loanAmount</p>
+                  <p class="weekly-value">{{TotalAmount}}</p>
+
+
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+
+        </div>
+      </div>
+      <div class="h-section ">
+
+        <div class="howWorks text-center">
+          <p class="title "> How it Works</p>
+          <div class="row">
+            <div class="col-6 col-sm-3 col-md-3">
+              <div class="works-body">
+                <!-- <div class="wrks-icon">
+                  <img src="./../../assets/images/icons/icon-05.png" alt="icon-here">
+                </div> -->
+
+                    <i class="material-icons  p-icon">
+                        done_outline
+                        </i>
+                <h4 class="wrks-head">Check Loan Details</h4>
+                <p class="wrks-caption">in a few clicks</p>
+              </div>
+            </div>
+            <div class="col-6 col-sm-3 col-md-3">
+              <div class="works-body">
+                <!-- <div class="wrks-icon">
+                  <img src="./../../assets/images/icons/icon-06.png" alt="icon-here">
+                </div> -->
+                <i class="material-icons  p-icon">
+                    touch_app
+                    </i>
+                <h4 class="wrks-head">Apply online</h4>
+                <p class="wrks-caption">in 10 minutes</p>
+              </div>
+            </div>
+            <div class="col-6 col-sm-3 col-md-3">
+              <div class="works-body ">
+                <!-- <div class="wrks-icon">
+                  <img src="./../../assets/images/icons/icon-07.png" alt="icon-here">
+                </div> -->
+                <i class="material-icons  p-icon">
+                    get_app
+                    </i>
+                <h4 class="wrks-head">Download the APP</h4>
+                <p class="wrks-caption "> Complete the application
+                  <!-- <a href=""><mat-icon  style="color: #7c7c7c">  android</mat-icon></a>
+                  <a href=""><mat-icon style="color: #7c7c7c">android</mat-icon></a> -->
+                </p>
+              </div>
+            </div>
+            <div class="col-6 col-sm-3 col-md-3">
+              <div class="works-body">
+                <!-- <div class="wrks-icon">
+                  <img src="./../../assets/images/icons/icon-08.png" alt="icon-here">
+                </div> -->
+                <i class="material-icons p-icon">
+                    sentiment_satisfied_alt
+                    </i>
+                <h4 class="wrks-head">Get your loan</h4>
+                <p class="wrks-caption">disbursed</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+</section>
+<section class="Why-section">
+  <div class="Why-container container">
+    <h4 class="title ">Why Way2money</h4>
+    <div class="row text-center">
+      <div class="col-6 col-sm-3 col-md-3">
+
+        <!-- <div class="s-icon"><img src="../../assets/images/icons/fast-process-04.png" alt="icon-here" class="f-iconimg">
+        </div> -->
+      <i class="material-icons w-icon">
+                alarm_on
+                </i>
+        <div class="s-head">Fast Processing</div>
+        <div class="s-caption">Complete application online and get a loan within 3 working days</div>
+      </div>
+      <div class="col-6 col-sm-3 col-md-3">
+        <!-- <div class="s-icon"><img src="../../assets/images/icons/fast-process-01.png" alt="icon-here" class="f-iconimg">
+        </div> -->     <i class="material-icons w-icon">
+            settings_ethernet
+          </i>
+
+        <div class="s-head">Flexibility</div>
+        <div class="s-caption">Multiple disbursements, partial disbursement, pre-payment</div>
+      </div>
+      <div class="col-6 col-sm-3 col-md-3">
+        <!-- <div class="s-icon"><img src="../../assets/images/icons/fast-process-02.png" alt="icon-here" class="f-iconimg">
+        </div> -->
+        <i class="material-icons w-icon">
+            alarm
+            </i>
+        <div class="s-head">Short Tenure</div>
+        <div class="s-caption"> Get short term loans for 15 days to 3 months </div>
+      </div>
+      <div class="col-6 col-sm-3 col-md-3">
+        <!-- <div class="s-icon"><img src="../../assets/images/icons/fast-process-03.png" alt="icon-here" class="f-iconimg">
+        </div> -->
+        <i class="material-icons w-icon">
+            check_circle
+            </i>
+        <div class="s-head">Fast Approval</div>
+        <div class="s-caption">Get amount same day <br>one day money</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="about-section">
+  <div class="container">
+    <div class="a-heading">
+      <h4 class="title">We Reached Upto</h4>
+      <!-- <p class="a-caption">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, hic.</p> -->
+    </div>
+    <div class="row">
+      <!-- <div class="col-6">
+        <div class="a-img">
+        </div>
+      </div> -->
+      <div class="col-12">
+        <div class="row pb-4">
+          <div class="col-6 col-sm-4 ">
+            <div class="a-box text-center">
+              <!-- <div class="a-icon">
+                      <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+                  </div> -->
+              <div class="a-box-heading">
+                <p class="a-box-head">100+</p>
+                <p class="a-box-caption">HAppy Customers in 2months</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-6 col-sm-4">
+            <div class="a-box text-center">
+              <!-- <div class="a-icon">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+                </div> -->
+              <div class="a-box-heading">
+                <p class="a-box-head">15M+</p>
+                <p class="a-box-caption">Amount Disbursed in 2months</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-12 col-sm-4">
+            <div class="a-box text-center">
+              <!-- <div class="a-icon">
+                      <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+                  </div> -->
+              <div class="a-box-heading">
+                <p class="a-box-head">95%</p>
+                <p class="a-box-caption">Repeated Customers</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="row">
+
+          <div class="col-12 ">
+            <div class="a-box text-center">
+              <!-- <div class="a-icon">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+                </div> -->
+              <div class="a-box-heading">
+                <p class="a-box-caption">Way2oney is a loan offering from startFinserv India Finance Private Limited, a non-banking finance
+                  company (NBFC) registered with the Reserve Bank of India (RBI)*</p>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- <section class="feature-section">
+    <div class="feature-container container">
+      <div class="a-heading">
+        <h4 class="a-head">Product features</h4>
+        <p class="a-caption">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, hic.</p>
+      </div>
+      <div class="feature-body">
+        <div class="row py-4">
+          <div class="col-5 pr-0">
+            <div class="f-img">
+
+            </div>
+          </div>
+          <div class="col-7 pl-0">
+            <div class="f-box">
+              <div class="fbox-heading">
+                <h4 class="fbox-head">Feature one</h4>
+                <p class="fbox-caption">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo in hic deleniti
+                  voluptas quas at corporis accusantium placeat veritatis earum.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row py-4">
+          <div class="col-7 pr-0">
+            <div class="f-box">
+              <div class="fbox-heading">
+                <h4 class="fbox-head">Feature one</h4>
+                <p class="fbox-caption">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo in hic deleniti
+                  voluptas quas at corporis accusantium placeat veritatis earum.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-5 pl-0">
+            <div class="f-img">
+
+            </div>
+          </div>
+        </div>
+        <div class="row py-4">
+          <div class="col-5 pr-0">
+            <div class="f-img">
+
+            </div>
+          </div>
+          <div class="col-7 pl-0">
+            <div class="f-box">
+              <div class="fbox-heading">
+                <h4 class="fbox-head">Feature one</h4>
+                <p class="fbox-caption">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo in hic deleniti
+                  voluptas quas at corporis accusantium placeat veritatis earum.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </section> -->
+<section class="testimonials-section">
+  <div class="test-body container ">
+    <h1 class="title">What clients says</h1>
+    <p class="test-caption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ullam ab magni doloremque!
+      Velit voluptas voluptate perspiciatis debitis, modi provident.</p>
+    <div class="testi-persons text-center">
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-5">
+          <div class="box">
+            <div class="testi-box">
+              <div class="per-img">
+
+              </div>
+              <h4 class=test-box-head>SOMU SURESH </h4>
+              <p class="text-box-caption">Developer</p>
+              <div class="test-symble">
+                <img src="./../../assets/images/landing/icons/quotation-mark small.png" alt="symble here" class="qoute">
+
+              </div>
+              <div class="test-content">
+                <p class="test-text">
+                  {{merchantReview}}</p>
+                <span *ngIf="merchantReview.length < 101" (click)="readMore()" class="read-more p-2 ">Read more</span>
+                <span *ngIf="merchantReview.length > 101" (click)="readLess()" class="read-more">Read less</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-5">
+          <div class="box">
+            <div class="testi-box">
+              <div class="per-img">
+
+              </div>
+              <h4 class=test-box-head>some name </h4>
+              <p class="text-box-caption">some caption</p>
+              <div class="test-symble">
+                <img src="./../../assets/images/landing/icons/quotation-mark small.png" alt="symble here" class="qoute">
+
+              </div>
+              <div class="test-content">
+                <p class="test-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis delectus
+                  est, repellat facilis ipsum, maxime commodi aspernatur odit consequatur ea possimus tenetur animi
+                  eveniet atque, sint eligendi sit sequi soluta!</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-5" >
+          <div class="box bg-white" >
+            <div class="testi-box">
+              <div class="per-img">
+
+              </div>
+              <h4 class=test-box-head>some name </h4>
+              <p class="text-box-caption">some caption</p>
+              <div class="test-symble">
+                <img src="./../../assets/images/landing/icons/quotation-mark small.png" alt="symble here" class="qoute">
+
+              </div>
+              <div class="test-content">
+                <p class="test-text">Lorem ipsum dolor sit epellat facilis ipsum,ea possimus tenetur animi eveniet
+                  atque, sint eligendi sit sequi soluta!</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="faq-section">
+  <div class="faq-container container">
+    <div class="faq-heading text-center">
+      <h4 class="title">Questions? Look here</h4>
+      <p class="faq-caption">can’t find the answer call us on 7897897845, email hello@way2money.com</p>
+    </div>
+
+    <div class="faq-body">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Who are we & What we do?
+          </mat-panel-title>
+
+        </mat-expansion-panel-header>
+
+        <p class="faq-content">Way2Money is a digital marketplace serving as a bridge between clients (people looking
+          for loans) and an array of lending institutions including banks, NBFCs, Housing Finance companies,
+          Micro-finance companies etc. We ensure you get unbiased credit financing deal from our lending partners at
+          unmatched prices. Our expertise lies in advising our clients in choosing the best & most suitable tailor-made
+          loan products from the market.</p>
+
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Do we charge any fee from clients for our services?
+          </mat-panel-title>
+
+        </mat-expansion-panel-header>
+
+        <p>No, our services are absolutely free for clients, we do not charge a single penny from our clients. We have
+          financial arrangements only with our lending partners (commission based).</p>
+
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Why should I need to Way2Money’s advice?
+          </mat-panel-title>
+
+        </mat-expansion-panel-header>
+
+        <p>We have a very robust & error-free algorithm designed to provide you the best possible deals from the market
+          based on your loan requirement & other details submitted. Therefore, please be doubly sure before submitting
+          the loan requirement & all other details so that our algorithm gives you a sound advice..</p>
+
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            What are the loan products available on Way2Money marketplace?
+          </mat-panel-title>
+
+        </mat-expansion-panel-header>
+
+        <p>Currently, we are offering comparison & aggregator services for Personal loan, Home loan, Education loan &
+          Business loan but there are multiple products in the pipeline like credit cards, mutual funds, insurance etc.
+          which will surface very soon on our website..</p>
+
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Which loan to choose for what purpose?
+          </mat-panel-title>
+
+        </mat-expansion-panel-header>
+
+        <p>Choosing the correct loan product is essential for fulfilling the right purpose. For example personal loans
+          can be used to fund weddings, spend on a vacation, pay huge medical expenses, purchase laptops & other
+          electronic items etc. Similarly, Home loans are to be used to buy a house, improve or extend an existing
+          house, Top-up on existing home loan etc. Education loans are to be used by students for study purposes as the
+          product name itself indicates & Business loans are also to be used for conducting business operations only.
+        </p>
+
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            What are the rates of interest?
+          </mat-panel-title>
+
+        </mat-expansion-panel-header>
+
+        <p>Rates of interest vary with each loan product & the corresponding lending institutions’ internal credit
+          policy. To check the rates of interest for a particular loan product, please fill-in our very simple & basic
+          online application form (it hardly takes 2 minutes) in order to get quotes from our lending partners
+          instantly.</p>
+
+      </mat-expansion-panel>
+
+
+
+    </div>
+  </div>
+
+  <footer class="footer-section">
+    <div class="footer-container container">
+      <div class="row ">
+        <div class="col-2">
+          <div class="footer-logo">
+            <img src="../../assets/images/landing/way2money-logowhite.png" alt="">
+          </div>
+        </div>
+        <div class="col-4">
+          <nav>
+            <ul class="nav navbar">
+              <li>Home </li>
+              <li>Privarcy Policy </li>
+              <li [routerLink]="['/terms']">Term and use </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-6">
+          <p class="footer-contact"> call us on 7897897845, email hello@way2money.com </p>
+        </div>
+      </div>
+      <hr class="footer-hr">
+      <div class="row">
+        <div class="col-12 pt-2 ">
+          <p class="footer-copyright">© Copyright Way2money. All Right Reserved Powered by Way2online</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="footer-bg"></div>
+
+</section>
