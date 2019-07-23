@@ -48,7 +48,8 @@ export class HomePageComponent implements OnInit {
   math = 0;
   matts = 0;
   totalText: any;
-  merchantReview = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis delectus est, repellat facilis ipsum, maxime commodi aspernatur odit consequatur ea possimus tenetur animi eveniet atque, sint eligendi sit sequi soluta!';
+  closeValue = 'close';
+  merchantReview = 'fast and secure service... I really appreciate the way the people helped me while completing the process... They have been great help.. the whole process has been done in 3 hours... thank you very much way2money...';
 
   // get tickInterval(): number | 'auto' {
   //   return this.showTicks ? (this.autoTicks ? 'auto' : this._tickInterval) : 0;
@@ -59,7 +60,7 @@ export class HomePageComponent implements OnInit {
   //   console.log('change******');
   // }
   constructor() {
-  //
+    //
   }
   ngOnInit() {
     this.totalText = this.merchantReview;
@@ -79,6 +80,8 @@ export class HomePageComponent implements OnInit {
   readMore() {
     this.merchantReview = this.totalText;
   }
+
+
   readLess() {
     this.merchantReview = this.merchantReview.slice(0, 100);
   }
@@ -87,11 +90,11 @@ export class HomePageComponent implements OnInit {
     this.tenureSelect();
   }
   formatLabel(value) {
-      if (value > 0) {
-        return Math.round(value / 1000) + 'k';
-      } else {
-        return 'Select';
-      }
+    if (value > 0) {
+      return Math.round(value / 1000) + 'k';
+    } else {
+      return 'Select';
+    }
   }
   // Tenure Select
   tenureSelect() {

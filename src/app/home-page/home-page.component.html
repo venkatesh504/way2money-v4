@@ -1,30 +1,40 @@
-<section class="landing-section">
+<section class="landing-section " id="home">
   <div class="landing-bg"></div>
   <div class="top-section">
     <app-top-nav></app-top-nav>
     <section class="main-section container">
       <div class="main-heading text-white text-center">
-        <h1 class="main-head">Business Loans @2% per month </h1>
+        <h1 class="main-head">Business Loans<span>@2% per month </span> </h1>
         <!-- <h1 class="main-head">Operational <span class="green_color"> Business Loans</span> <br>
           @2% <span class="less-font">per month</span> </h1> -->
-        <p class="main-caption">Digital Credit
-          Anytime, Anywhere</p> <div class="dowload-app  row text-center">
-              <div class="col-6">
+        <p class="main-caption m-0">Digital Credit
+          Anytime, Anywhere</p>
+        <div class="dowload-app  text-center p-1">
+          <div class=" ">
 
-                <p class=" how-much text-right">Download the app</p>
-              </div>
-              <div class="col-6 text-left" >
-                <a href="" style="color: white !important">
-                  <mat-icon>android</mat-icon>
-                </a>
-                <a href="">
-                  <mat-icon>apple</mat-icon>
-                </a>
-              </div>
-
-
-
+            <p class=" how-much m-0">Download the app</p>
+            <a href="https://play.google.com/store/apps/details?id=com.sun.way2moneybusiness&hl=en">
+              <img src="../../assets/images/icons/android-small.png" alt="" class="img-fluid p-1">
+            </a>
+            <a href=" https://apps.apple.com/in/app/way2money/id1417015405   ">
+              <img src="../../assets/images/icons/apple-logo-small.png" alt="" class="img-fluid p-1">
+            </a>
+          </div>
+          <!-- <div class="col-6 pl-1">
+            <div class="icons text-left">
+              <a href="https://play.google.com/store/apps/details?id=com.sun.way2moneybusiness&hl=en">
+                <img src="../../assets/images/icons/android-small.png" alt="" class="img-fluid p-1">
+              </a>
+              <a href=" https://apps.apple.com/in/app/way2money/id1417015405   ">
+                <img src="../../assets/images/icons/apple-logo-small.png" alt="" class="img-fluid p-1">
+              </a>
             </div>
+
+          </div> -->
+
+
+
+        </div>
 
 
 
@@ -38,24 +48,26 @@
               </div> -->
 
           <div class="row">
-            <div class="col-12  ">
-              <p class="how-much">How much you want Barrow? <span class="much-value">&#8377;
+            <div class="col-12  text-center">
+              <p class="how-much">How much you want Barrow? <span class="much-value"><img
+                    src="../../assets/images/icons/rupee-indian-small.png" alt="">
                   {{value}}</span></p>
 
             </div>
 
           </div>
-            <div class="row">
-                <div class=" col-12 col-sm-8 col-md-9 col-lg-10 ">
-                    <mat-slider class="example-margin" [disabled]="disabled" [invert]="invert" [max]="max" [min]="min"
-                      [step]="step" thumbLabel [displayWith]="formatLabel" [displayValue]="step" [tickInterval]="tickInterval"
-                      [(ngModel)]="value" (input)="selectAmount($event)">
-                    </mat-slider>
-                  </div>
-                  <div class=" col-12 col-sm-4 col-md-3 col-lg-2">
-                    <button class="main-btn " (click)="selectAmount()">Proceed</button>
-                  </div>
+          <div class="row">
+            <div class=" col-12  col-sm-8 col-md-9 col-lg-10 ">
+              <mat-slider class="example-margin" [disabled]="disabled" [invert]="invert" [max]="max" [min]="min"
+                [step]="step" thumbLabel [displayWith]="formatLabel" [displayValue]="step" [tickInterval]="tickInterval"
+                [(ngModel)]="value" (input)="selectAmount($event)">
+              </mat-slider>
             </div>
+            <div class=" col-12 col-sm-4 col-md-3 col-lg-2">
+              <a href="https://business.way2money.com/mobile/registration" class="main-btn "
+                (click)="selectAmount()">Proceed</a>
+            </div>
+          </div>
 
           <div class="calculation " *ngIf="value > 0">
             <div class="row">
@@ -84,7 +96,7 @@
             <div class="results text-center">
               <div class="row">
                 <div class="col-6 col-sm-6 col-md-4">
-                  <p class="weekly-caption"> Weekly Installments  </p>
+                  <p class="weekly-caption"> Weekly Installments </p>
                   <p class="weekly-value">{{weeklyEMI.toFixed(2)}}</p>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4">
@@ -117,9 +129,9 @@
                   <img src="./../../assets/images/icons/icon-05.png" alt="icon-here">
                 </div> -->
 
-                    <i class="material-icons  p-icon">
-                        done_outline
-                        </i>
+                <i class="material-icons  p-icon">
+                  done_outline
+                </i>
                 <h4 class="wrks-head">Check Loan Details</h4>
                 <p class="wrks-caption">in a few clicks</p>
               </div>
@@ -130,8 +142,8 @@
                   <img src="./../../assets/images/icons/icon-06.png" alt="icon-here">
                 </div> -->
                 <i class="material-icons  p-icon">
-                    touch_app
-                    </i>
+                  touch_app
+                </i>
                 <h4 class="wrks-head">Apply online</h4>
                 <p class="wrks-caption">in 10 minutes</p>
               </div>
@@ -142,8 +154,8 @@
                   <img src="./../../assets/images/icons/icon-07.png" alt="icon-here">
                 </div> -->
                 <i class="material-icons  p-icon">
-                    get_app
-                    </i>
+                  get_app
+                </i>
                 <h4 class="wrks-head">Download the APP</h4>
                 <p class="wrks-caption "> Complete the application
                   <!-- <a href=""><mat-icon  style="color: #7c7c7c">  android</mat-icon></a>
@@ -157,8 +169,8 @@
                   <img src="./../../assets/images/icons/icon-08.png" alt="icon-here">
                 </div> -->
                 <i class="material-icons p-icon">
-                    sentiment_satisfied_alt
-                    </i>
+                  sentiment_satisfied_alt
+                </i>
                 <h4 class="wrks-head">Get your loan</h4>
                 <p class="wrks-caption">disbursed</p>
               </div>
@@ -173,25 +185,25 @@
   </div>
 
 </section>
-<section class="Why-section">
+<section class="Why-section " id="Aboutus">
   <div class="Why-container container">
-    <h4 class="title ">Why Way2money</h4>
+    <h4 class="title pb-5">Features</h4>
     <div class="row text-center">
       <div class="col-6 col-sm-3 col-md-3">
 
         <!-- <div class="s-icon"><img src="../../assets/images/icons/fast-process-04.png" alt="icon-here" class="f-iconimg">
         </div> -->
-      <i class="material-icons w-icon">
-                alarm_on
-                </i>
+        <i class="material-icons w-icon">
+          alarm_on
+        </i>
         <div class="s-head">Fast Processing</div>
         <div class="s-caption">Complete application online and get a loan within 3 working days</div>
       </div>
       <div class="col-6 col-sm-3 col-md-3">
         <!-- <div class="s-icon"><img src="../../assets/images/icons/fast-process-01.png" alt="icon-here" class="f-iconimg">
-        </div> -->     <i class="material-icons w-icon">
-            settings_ethernet
-          </i>
+        </div> --> <i class="material-icons w-icon">
+          settings_ethernet
+        </i>
 
         <div class="s-head">Flexibility</div>
         <div class="s-caption">Multiple disbursements, partial disbursement, pre-payment</div>
@@ -200,8 +212,8 @@
         <!-- <div class="s-icon"><img src="../../assets/images/icons/fast-process-02.png" alt="icon-here" class="f-iconimg">
         </div> -->
         <i class="material-icons w-icon">
-            alarm
-            </i>
+          alarm
+        </i>
         <div class="s-head">Short Tenure</div>
         <div class="s-caption"> Get short term loans for 15 days to 3 months </div>
       </div>
@@ -209,8 +221,8 @@
         <!-- <div class="s-icon"><img src="../../assets/images/icons/fast-process-03.png" alt="icon-here" class="f-iconimg">
         </div> -->
         <i class="material-icons w-icon">
-            check_circle
-            </i>
+          check_circle
+        </i>
         <div class="s-head">Fast Approval</div>
         <div class="s-caption">Get amount same day <br>one day money</div>
       </div>
@@ -220,7 +232,7 @@
 <section class="about-section">
   <div class="container">
     <div class="a-heading">
-      <h4 class="title">We Reached Upto</h4>
+      <h4 class="title pb-5">Milestone</h4>
       <!-- <p class="a-caption">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, hic.</p> -->
     </div>
     <div class="row">
@@ -237,7 +249,7 @@
                   </div> -->
               <div class="a-box-heading">
                 <p class="a-box-head">100+</p>
-                <p class="a-box-caption">HAppy Customers in 2months</p>
+                <p class="a-box-caption">Happy Customers in 2months</p>
               </div>
             </div>
 
@@ -275,7 +287,8 @@
                     <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
                 </div> -->
               <div class="a-box-heading">
-                <p class="a-box-caption">Way2oney is a loan offering from startFinserv India Finance Private Limited, a non-banking finance
+                <p class="a-box-caption">Way2money is a loan offering from <span
+                    style="color: #2475c9">STARFINSERV</span> India Finance Private Limited, a non-banking finance
                   company (NBFC) registered with the Reserve Bank of India (RBI)*</p>
 
               </div>
@@ -349,70 +362,79 @@
   </section> -->
 <section class="testimonials-section">
   <div class="test-body container ">
-    <h1 class="title">What clients says</h1>
-    <p class="test-caption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ullam ab magni doloremque!
-      Velit voluptas voluptate perspiciatis debitis, modi provident.</p>
+    <h1 class="title ">Reviews</h1>
+    <!-- <p class="test-caption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ullam ab magni doloremque!
+      Velit voluptas voluptate perspiciatis debitis, modi provident.</p> -->
     <div class="testi-persons text-center">
       <div class="row">
         <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-5">
           <div class="box">
             <div class="testi-box">
-              <div class="per-img">
+              <div>
+                <img src="../../assets/images/customers/Kalyan-Shop-Owner.jpg" alt="" class="per-img">
+              </div>
+              <h4 class=test-box-head>KALYAN </h4>
+              <p class="text-box-caption">Shop Owner</p>
+              <div class="test-symble">
+                <img src="./../../assets/images/landing/icons/quotation-mark small.png" alt="symble here" class="qoute">
 
               </div>
-              <h4 class=test-box-head>SOMU SURESH </h4>
-              <p class="text-box-caption">Developer</p>
+              <div class="test-content ">
+                <p class="test-text">{{merchantReview}}</p>
+                <span *ngIf="merchantReview < 100" (click)="readMore()" class="read-more p-2 ">Read more</span>
+                <span *ngIf="merchantReview > 100 " (click)="readLess()" class="read-more">Read less</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-5">
+          <div class="box">
+            <div class="testi-box">
+              <div>
+                <img src="../../assets/images/customers/Kalyan-Shop-Owner.jpg" alt="" class="per-img">
+              </div>
+              <h4 class=test-box-head>KALYAN </h4>
+              <p class="text-box-caption">Shop Owner</p>
+              <div class="test-symble">
+                <img src="./../../assets/images/landing/icons/quotation-mark small.png" alt="symble here" class="qoute">
+
+              </div>
+              <div class="test-content " [ngClass]="{'content1': closeValue == 'content1','less': closeValue=='close'}">
+                <p class="test-text">
+                  fast and secure service... I really appreciate the way the people helped me while completing the
+                  process... They have been great help.. the whole process has been done in 3 hours... thank you very
+                  much way2money...</p>
+
+              </div>
+              <!-- <span *ngIf="closeValue == 'close' " (click)="more(1)" class="read-more p-2 ">Read more</span>
+              <span *ngIf="closeValue== 'content1' " (click)="less()" class="read-more">Read less</span> -->
+            </div>
+          </div>
+
+        </div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-5">
+          <div class="box bg-white">
+            <div class="testi-box">
+              <div>
+                <img src="../../assets/images/customers/Kalyan-Shop-Owner.jpg" alt="" class="per-img">
+              </div>
+              <h4 class=test-box-head>KALYAN </h4>
+              <p class="text-box-caption">Shop Owner</p>
               <div class="test-symble">
                 <img src="./../../assets/images/landing/icons/quotation-mark small.png" alt="symble here" class="qoute">
 
               </div>
               <div class="test-content">
                 <p class="test-text">
-                  {{merchantReview}}</p>
-                <span *ngIf="merchantReview.length < 101" (click)="readMore()" class="read-more p-2 ">Read more</span>
-                <span *ngIf="merchantReview.length > 101" (click)="readLess()" class="read-more">Read less</span>
+                    fast and secure service... I really appreciate the way the people helped me while completing the
+                    process... They have been great help.. the whole process has been done in 3 hours... thank you very
+                    much way2money...
+                </p>
               </div>
-            </div>
-          </div>
-
-        </div>
-        <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-5">
-          <div class="box">
-            <div class="testi-box">
-              <div class="per-img">
-
-              </div>
-              <h4 class=test-box-head>some name </h4>
-              <p class="text-box-caption">some caption</p>
-              <div class="test-symble">
-                <img src="./../../assets/images/landing/icons/quotation-mark small.png" alt="symble here" class="qoute">
-
-              </div>
-              <div class="test-content">
-                <p class="test-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis delectus
-                  est, repellat facilis ipsum, maxime commodi aspernatur odit consequatur ea possimus tenetur animi
-                  eveniet atque, sint eligendi sit sequi soluta!</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-5" >
-          <div class="box bg-white" >
-            <div class="testi-box">
-              <div class="per-img">
-
-              </div>
-              <h4 class=test-box-head>some name </h4>
-              <p class="text-box-caption">some caption</p>
-              <div class="test-symble">
-                <img src="./../../assets/images/landing/icons/quotation-mark small.png" alt="symble here" class="qoute">
-
-              </div>
-              <div class="test-content">
-                <p class="test-text">Lorem ipsum dolor sit epellat facilis ipsum,ea possimus tenetur animi eveniet
-                  atque, sint eligendi sit sequi soluta!</p>
-              </div>
+              <!-- <span *ngIf="closeValue == 'close' " (click)="more(2)" class="read-more p-2 ">Read more</span>
+              <span *ngIf="closeValue== 'content2' " (click)="less()" class="read-more">Read less</span> -->
             </div>
           </div>
 
@@ -423,11 +445,11 @@
 </section>
 
 
-<section class="faq-section">
+<section class="faq-section" id="FAQ">
   <div class="faq-container container">
     <div class="faq-heading text-center">
-      <h4 class="title">Questions? Look here</h4>
-      <p class="faq-caption">can’t find the answer call us on 7897897845, email hello@way2money.com</p>
+      <h4 class="title">Questions?</h4>
+      <p class="faq-caption">Can’t find the answer call us on 8184846666, email hello@way2money.com</p>
     </div>
 
     <div class="faq-body">
@@ -454,7 +476,8 @@
 
         </mat-expansion-panel-header>
 
-        <p>No, our services are absolutely free for clients, we do not charge a single penny from our clients. We have
+        <p class="faq-content">No, our services are absolutely free for clients, we do not charge a single penny from
+          our clients. We have
           financial arrangements only with our lending partners (commission based).</p>
 
       </mat-expansion-panel>
@@ -466,7 +489,8 @@
 
         </mat-expansion-panel-header>
 
-        <p>We have a very robust & error-free algorithm designed to provide you the best possible deals from the market
+        <p class="faq-content">We have a very robust & error-free algorithm designed to provide you the best possible
+          deals from the market
           based on your loan requirement & other details submitted. Therefore, please be doubly sure before submitting
           the loan requirement & all other details so that our algorithm gives you a sound advice..</p>
 
@@ -479,7 +503,8 @@
 
         </mat-expansion-panel-header>
 
-        <p>Currently, we are offering comparison & aggregator services for Personal loan, Home loan, Education loan &
+        <p class="faq-content">Currently, we are offering comparison & aggregator services for Personal loan, Home loan,
+          Education loan &
           Business loan but there are multiple products in the pipeline like credit cards, mutual funds, insurance etc.
           which will surface very soon on our website..</p>
 
@@ -492,7 +517,8 @@
 
         </mat-expansion-panel-header>
 
-        <p>Choosing the correct loan product is essential for fulfilling the right purpose. For example personal loans
+        <p class="faq-content">Choosing the correct loan product is essential for fulfilling the right purpose. For
+          example personal loans
           can be used to fund weddings, spend on a vacation, pay huge medical expenses, purchase laptops & other
           electronic items etc. Similarly, Home loans are to be used to buy a house, improve or extend an existing
           house, Top-up on existing home loan etc. Education loans are to be used by students for study purposes as the
@@ -508,7 +534,8 @@
 
         </mat-expansion-panel-header>
 
-        <p>Rates of interest vary with each loan product & the corresponding lending institutions’ internal credit
+        <p class="faq-content">Rates of interest vary with each loan product & the corresponding lending institutions’
+          internal credit
           policy. To check the rates of interest for a particular loan product, please fill-in our very simple & basic
           online application form (it hardly takes 2 minutes) in order to get quotes from our lending partners
           instantly.</p>
@@ -523,22 +550,23 @@
   <footer class="footer-section">
     <div class="footer-container container">
       <div class="row ">
-        <div class="col-2">
+        <div class="col-6 col-sm-6 col-md-2">
           <div class="footer-logo">
-            <img src="../../assets/images/landing/way2money-logowhite.png" alt="">
+            <a href="#home">  <img src="../../assets/images/landing/way2money-logowhite.png" alt=""></a>
+
           </div>
         </div>
-        <div class="col-4">
+        <div class="col-6 col-sm-6 col-md-4">
           <nav>
             <ul class="nav navbar">
-              <li>Home </li>
-              <li>Privarcy Policy </li>
-              <li [routerLink]="['/terms']">Term and use </li>
+              <li  class="footerlinks"> <a href="#home">Home</a>  </li>
+              <li [routerLink]="['/privacy']" class="footerlinks">Privacy Policy </li>
+              <li [routerLink]="['/terms']" class="footerlinks">Term and use </li>
             </ul>
           </nav>
         </div>
         <div class="col-6">
-          <p class="footer-contact"> call us on 7897897845, email hello@way2money.com </p>
+          <p class="footer-contact"> Contact us: 8184846666, hello@way2money.com </p>
         </div>
       </div>
       <hr class="footer-hr">

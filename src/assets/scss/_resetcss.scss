@@ -1,6 +1,9 @@
 body{
   font-family: 'Montserrat', sans-serif;
-  color: #20206a !important;
+  color: #484848 !important;
+}
+a{
+  text-decoration: none !important
 }
 button:focus{
   outline: transparent !important;
@@ -24,12 +27,13 @@ button:focus{
 }
 .navbar_fixed{
   position: fixed;
+  background: #2475c9;
   top: 0;
   left: 0;
   right: 0;
-  background: #ffa217;
-z-index: 4;
- .signin-btn{
-  background: #20206a;
+  z-index: 4;
+  .signin-btn{
+    background: #F48024;
  }
 }
+
