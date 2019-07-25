@@ -5,3 +5,24 @@
     color: white !important;
   }
 }
+@media(max-width:1024px){
+  .landing-section .main-section .main-head{
+    font-size: 38px !important;
+  }
+}
+@media(max-width:991px){
+  .footer-bg{
+    padding: 15%;
+  }
+}
+@media(max-width: 480px){
+  .landing-bg{
+    height: 530px !important;
+  }
+  .landing-section .main-section .main-head{
+    font-size: 26px !important;
+  }
+  .footer-bg{
+    padding: 43%;
+  }
+}
