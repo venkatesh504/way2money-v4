@@ -63,6 +63,7 @@ export class HomePageComponent implements OnInit {
     //
   }
   ngOnInit() {
+
     this.totalText = this.merchantReview;
     this.merchantReview = this.merchantReview.slice(0, 100);
     // for (let i = 0; i <= 2; i + 1) {
